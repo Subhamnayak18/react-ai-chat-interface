@@ -1,0 +1,28 @@
+{
+  "name": "gemini-mock-server",
+  "version": "1.0.0",
+  "description": "Mock server for Gemini API using Hono",
+  "main": "index.js",
+  "type": "module",
+ "scripts": {
+    "start": "node index.js",
+    "frontend": "npm --prefix ../../gemini-qa-app run dev",
+    "dev": "concurrently \"npm run start\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "@google/genai": "^1.5.1",
+    "@google/generative-ai": "^0.24.1",
+    "@hono/node-server": "^1.14.1",
+    "better-sqlite3": "^11.9.1",
+    "dotenv": "^16.5.0",
+    "hono": "4.8.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "tiktoken": "^1.0.21",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
